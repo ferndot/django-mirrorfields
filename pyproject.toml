@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "django-mirrorfields"
+version = "0.1.0"
+description = "The pane-less way to denormalize data"
+authors = ["Josh Smith <josh@joshsmith.codes>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+codecov = "*"
+coverage = "*"
+flake8 = "*"
+invoke = "*"
+mock = "*"
+tox = "*"
+twine = "*"
+wheel = "*"
+"zest.releaser" = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
