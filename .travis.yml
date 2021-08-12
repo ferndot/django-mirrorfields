@@ -1,25 +1,19 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
-
 python:
-  - "3.6"
+  - "3.9"
 
-env: 
-  - TOX_ENV=py36-django-111
-  - TOX_ENV=py35-django-111
-  - TOX_ENV=py27-django-111
-  - TOX_ENV=py37-django-21
-  - TOX_ENV=py36-django-21
-  - TOX_ENV=py35-django-21
+env:
+  - TOX_ENV=py39-django-31
+  - TOX_ENV=py39-django-32
+
+cache:
+  directories:
+    - .venv
 
 matrix:
   fast_finish: true
 
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements_test.txt
-
-# command to run tests using coverage, e.g. python setup.py test
+before_install: pip install poetry tox-travis
 script: tox -e $TOX_ENV
 
 after_success:

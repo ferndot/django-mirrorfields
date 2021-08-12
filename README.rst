@@ -35,19 +35,6 @@ Add it to your `INSTALLED_APPS`:
         ...
     )
 
-Add Django Mirror Fields's URL patterns:
-
-.. code-block:: python
-
-    from django_mirrorfields import urls as django_mirrorfields_urls
-
-
-    urlpatterns = [
-        ...
-        url(r'^', include(django_mirrorfields_urls)),
-        ...
-    ]
-
 Features
 --------
 
