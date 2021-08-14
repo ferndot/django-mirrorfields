@@ -31,7 +31,7 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
-        'django_mirrorfields.apps.DjangoMirrorfieldsConfig',
+        'django_mirrorfields',
         ...
     )
 
@@ -47,9 +47,7 @@ Does the code actually work?
 
 ::
 
-    source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install tox
-    (myenv) $ tox
+    poetry run tox
 
 
 Development commands
@@ -57,8 +55,8 @@ Development commands
 
 ::
 
-    pip install -r requirements_dev.txt
-    invoke -l
+    poetry install
+    poetry run pre-commit install
 
 
 Credits
